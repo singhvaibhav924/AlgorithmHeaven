@@ -60,18 +60,23 @@ public class KMeansVisualizer extends JPanel implements MouseListener {
             }
             g.fillOval((int)p.X - 5, (int)p.Y - 5, 10, 10);
         }
+
+        for(KMeansCentroid c : KM.centeroids){
+            g.setColor(colorArr[c.index]);
+            g.fillRect((int)c.X - 5, (int)c.Y - 5, 10, 10);
+            g.setColor(Color.WHITE);
+            g.drawRect((int)c.X - 5, (int)c.Y - 5, 10, 10);
+        }
     }
 
     @Override
     public void mouseClicked(MouseEvent e) {
-        //System.out.println("Click");
     }
 
     @Override
     public void mousePressed(MouseEvent e) {
         KM.nodes.add(new KMeansNode(e.getX(),e.getY()));
         repaint();
-        System.out.println("new node added !");
     }
 
     @Override

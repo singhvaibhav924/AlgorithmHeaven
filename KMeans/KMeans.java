@@ -58,7 +58,6 @@ public class KMeans {
                     center.X = nx;
                     center.Y = ny;
                 }
-                System.out.println("CENTROID " + center.index + " LOCATION " + center.X + " , " + center.Y);
             }
 
         }
