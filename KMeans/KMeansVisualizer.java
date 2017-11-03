@@ -13,7 +13,7 @@ public class KMeansVisualizer extends JPanel implements MouseListener {
     public static void main(String[] args) {
         JFrame window = new JFrame();
         window.setTitle("KMeans Visualizer");
-        window.setSize(600,800);
+        window.setSize(600,600);
 
         KMeansVisualizer kmv = new KMeansVisualizer();
 
